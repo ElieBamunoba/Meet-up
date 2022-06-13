@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Route,
-  Routes,
+  Routes
 } from 'react-router-dom';
 
 import AllMeetupsPage from './pages/AllMeetups';
