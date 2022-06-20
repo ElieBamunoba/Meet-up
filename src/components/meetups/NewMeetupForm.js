@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import classes from './NewMeetupForm.module.css';
 import Card from '../ui/card';
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
     //helping access the Dom element directly
     const titleInputRef = useRef();
     const imageInputRef = useRef();
@@ -23,7 +23,7 @@ function NewMeetupForm() {
             address: enteredAddress,
             description: enteredDescription,
         }
-        console.log(meetupData);
+        props.onAddMeetup(meetupData);
 
     }
 
