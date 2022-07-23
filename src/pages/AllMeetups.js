@@ -6,7 +6,7 @@ import MeetupList from "../components/meetups/MeetupList"
 function AllMeetupsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedMeetups, setLoadedMeetups] = useState([]);
-
+    //fetching
     useEffect(() => {
         setIsLoading(true);
         fetch('https://react-meetup-app-project-2db04-default-rtdb.firebaseio.com/meetups.json'
@@ -23,9 +23,6 @@ function AllMeetupsPage() {
                 }
                 meetups.push(meetup);
             }
-
-
-
             setIsLoading(false);
             setLoadedMeetups(meetups);
         });
